@@ -1,0 +1,21 @@
+div.thumbnail-image {
+    min-width: 100px;
+    max-width: 200px;
+}
+
+span.label {
+    font-size: 85%;
+}
+
+form.login-form {
+    margin-top: 11px;
+}
+
+form.logout-form {
+    margin-top: 15px;
+    padding-bottom: 6px;
+}
+
+form label.user-label {
+    margin-top: -2px;
+}
