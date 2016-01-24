@@ -30,7 +30,10 @@ if (isset($_GET['delete'])) {
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Posts</h1>
+                    <h1 class="page-header">
+                        Posts
+                        <a class="btn btn-default" href="../new_post.php">Add new</a>
+                    </h1>
 
                     <?php
                     if (isset($success_message)) {

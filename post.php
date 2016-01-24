@@ -50,7 +50,16 @@ if (isset($_POST['submit_comment'])) {
             $post = findPostById($post_id);
             ?>
             <!-- Title -->
-            <h1><?php echo $post['title'] ?></h1>
+            <h1>
+                <?php 
+                echo $post['title'];
+                if (isset($_SESSION['user']) && $_SESSION['user']['role'] == "Administrator") { 
+                ?>
+                    <a class="btn btn-xs btn-primary" href="admin/edit_post.php?post_id=<?php echo $post['id'] ?>">Edit</a>
+                <?php
+                }
+                ?>
+            </h1>
 
             <!-- Author -->
             <p class="lead">

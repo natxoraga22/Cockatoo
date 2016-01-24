@@ -50,7 +50,8 @@ if (isset($_POST['submit_edit'])) {
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Edit post
+                    <h1 class="page-header">
+                        Edit post
                         <a class="pull-right btn btn-default" href="../post.php?id=<?php echo $id ?>">
                             View post <i class="fa fa-chevron-right"></i>
                         </a>
