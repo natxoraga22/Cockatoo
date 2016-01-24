@@ -22,7 +22,10 @@ if (isset($_GET['delete'])) {
             <!-- Page Heading -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Users</h1>
+                    <h1 class="page-header">
+                        Users
+                        <a class="btn btn-default" href="new_user.php">Add new</a>
+                    </h1>
                    
                     <?php
                     if (isset($success_message)) {

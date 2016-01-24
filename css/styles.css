@@ -19,3 +19,11 @@ form.logout-form {
 form label.user-label {
     margin-top: -2px;
 }
+
+form.form-inline select.bulk-actions {
+    width: 200px;
+}
+
+div.checkbox input.bulk-checkbox {
+    margin-left: -16px;
+}

@@ -28,8 +28,12 @@ if (isset($_POST['submit_logout'])) {
                     <i class="fa fa-fw fa-file-text"></i> Posts <i class="fa fa-fw fa-caret-down"></i>
                 </a>
                 <ul id="posts_dropdown" class="collapse <?php if ($page == "posts.php" || $page == "new_post.php") echo "in" ?>">
-                    <li <?php if ($page == "posts.php") echo "class='active'" ?>><a href="posts.php">All posts</a></li>
-                    <li <?php if ($page == "new_post.php") echo "class='active'" ?>><a href="new_post.php">New post</a></li>
+                    <li <?php if ($page == "posts.php") echo "class='active'" ?>>
+                        <a href="posts.php"><i class="fa fa-fw fa-list-ul"></i> All posts</a>
+                    </li>
+                    <li <?php if ($page == "new_post.php") echo "class='active'" ?>>
+                        <a href="new_post.php"><i class="fa fa-fw fa-file"></i> New post</a>
+                    </li>
                 </ul>
             </li>
 
@@ -49,8 +53,12 @@ if (isset($_POST['submit_logout'])) {
                     <i class="fa fa-fw fa-users"></i> Users <i class="fa fa-fw fa-caret-down"></i>
                 </a>
                 <ul id="users_dropdown" class="collapse <?php if ($page == "users.php" || $page == "new_user.php") echo "in" ?>">
-                    <li <?php if ($page == "users.php") echo "class='active'" ?>><a href="users.php">All users</a></li>
-                    <li <?php if ($page == "new_user.php") echo "class='active'" ?>><a href="new_user.php">New user</a></li>
+                    <li <?php if ($page == "users.php") echo "class='active'" ?>>
+                        <a href="users.php"><i class="fa fa-fw fa-users"></i> All users</a>
+                    </li>
+                    <li <?php if ($page == "new_user.php") echo "class='active'" ?>>
+                        <a href="new_user.php"><i class="fa fa-fw fa-user-plus"></i> New user</a>
+                    </li>
                 </ul>
             </li>
 
