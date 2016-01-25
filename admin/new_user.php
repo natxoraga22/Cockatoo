@@ -1,6 +1,6 @@
-<?php require_once "../database/users_functions.php" ?>  
-
 <?php require "includes/admin_header.php" ?>
+
+<?php require_once "../database/users_functions.php" ?>  
 
 <?php
 /** INSERT USER **/

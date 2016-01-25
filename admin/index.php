@@ -1,9 +1,9 @@
+<?php require "includes/admin_header.php" ?>
+
 <?php require_once "../database/posts_functions.php" ?>    
 <?php require_once "../database/comments_functions.php" ?>
 <?php require_once "../database/users_functions.php" ?>        
 <?php require_once "../database/category_functions.php" ?>    
-
-<?php require "includes/admin_header.php" ?>
 
 <div id="wrapper">
 

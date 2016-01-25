@@ -1,10 +1,9 @@
+<?php require "includes/header.php" ?>
+
 <?php require_once "database/category_functions.php" ?>    
 <?php require_once "database/posts_functions.php" ?>    
 
-<?php 
-require "includes/header.php";
-require "includes/navigation.php"; 
-?>
+<?php require "includes/navigation.php" ?>
 
 <!-- Page Content -->
 <div class="container">

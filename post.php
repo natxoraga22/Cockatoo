@@ -1,7 +1,7 @@
+<?php require "includes/header.php" ?>
+
 <?php require_once "database/posts_functions.php" ?>    
 <?php require_once "database/comments_functions.php" ?>    
-
-<?php require "includes/header.php" ?>
 
 <?php
 if (isset($_GET['id'])) {
