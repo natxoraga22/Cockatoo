@@ -23,7 +23,7 @@
 <?php
 if (isset($post['image']) && trim($post['image']) != "") {
 ?>
-    <img class="img-responsive" src="images/<?php echo $post['image'] ?>" alt="">
+    <img class="img-responsive center-block" src="images/<?php echo $post['image'] ?>" alt="">
     <hr>
 <?php
 }

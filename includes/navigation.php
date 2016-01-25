@@ -59,7 +59,7 @@ if (isset($_POST['submit_logout'])) {
                     <!-- Username -->
                     <div class="form-group <?php if (isset($loginFailed)) echo "has-error has-feedback" ?>">
                         <label class="sr-only" for="username">Username:</label>
-                        <input type="text" name="username" class="form-control input-sm" placeholder="Username">
+                        <input type="text" name="username" class="form-control input-sm login-input" placeholder="Username">
                         <?php 
                         if (isset($loginFailed)) { 
                         ?>
@@ -71,7 +71,7 @@ if (isset($_POST['submit_logout'])) {
                     <!-- Password -->
                     <div class="form-group <?php if (isset($loginFailed)) echo "has-error has-feedback"?>">
                         <label class="sr-only" for="password">Password:</label>
-                        <input type="password" name="password" class="form-control input-sm" placeholder="Password">
+                        <input type="password" name="password" class="form-control input-sm login-input" placeholder="Password">
                         <?php 
                         if (isset($loginFailed)) {
                         ?>
@@ -83,6 +83,7 @@ if (isset($_POST['submit_logout'])) {
                     <button type="submit" name="submit_login" class="btn btn-primary btn-sm">
                         <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> Login
                     </button>
+                    <a class="btn btn-success btn-sm" href="register.php">Register</a>
                 </form>
             <?php
             }

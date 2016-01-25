@@ -4,3 +4,4 @@
 *Dejar categoria por defecto o sin categoria a los posts cuando se elimina una categoria
 *Link al clicar en el autor de un post: todos los posts de ese autor
 *Link en la pagina "todos los posts" en la categoria y el autor de cada post
+*Boton delete al lado del "Edit" que aparece al lado de cada post en la pagina principal??

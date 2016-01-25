@@ -17,6 +17,17 @@ form.logout-form {
     padding-bottom: 6px;
 }
 
+/* Navigation bar login inputs width */
+form.login-form input.login-input {
+    width: 110px;
+}
+
+/* Register page heading */
+h2.register-heading {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 
 /***** ADMIN *****/
 
