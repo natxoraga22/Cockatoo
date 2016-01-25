@@ -25,13 +25,9 @@ session_start();
    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+     
     <!-- Google Charts -->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    
-    <!-- TinyMCE Editor -->
-    <script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>
-    <script src="js/tinymce.js"></script>
       
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

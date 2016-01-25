@@ -1,12 +1,13 @@
-div.thumbnail-image {
-    min-width: 100px;
-    max-width: 200px;
-}
-
+/* Navigation bar admin & login labels */
 span.label {
     font-size: 85%;
 }
 
+form label.user-label {
+    margin-top: -2px;
+}
+
+/* Navigation bar login & logout forms */
 form.login-form {
     margin-top: 11px;
 }
@@ -16,14 +17,21 @@ form.logout-form {
     padding-bottom: 6px;
 }
 
-form label.user-label {
-    margin-top: -2px;
+
+/***** ADMIN *****/
+
+/* Post & user images */
+div.thumbnail-image {
+    min-width: 100px;
+    max-width: 200px;
 }
 
+/* Bulk actions select width */
 form.form-inline select.bulk-actions {
     width: 200px;
 }
 
+/* Posts table checkbox position */
 div.checkbox input.bulk-checkbox {
     margin-left: -16px;
 }
