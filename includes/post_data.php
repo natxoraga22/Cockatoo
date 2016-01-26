@@ -1,7 +1,25 @@
 <?php
-    $post_content = $post['content'];
-    $post_excerpt = substr($post_content, 0, 500);
-    if (strlen($post_content) > 500) $post_excerpt .= "...";
+if (!function_exists('getPostExcerpt')) {
+    function getPostExcerpt($html, $num_chars) {
+        if (strlen($html) <= $num_chars) $preview = $html;
+        else {
+            $preview = '';
+            $dom = DOMDocument::loadHTML($html);    // creates DOCTYPE, <html>, and <body>
+            $dom->removeChild($dom->firstChild);    // DOCTYPE
+            
+            $node = $dom->firstChild->firstChild->firstChild;
+            while (strlen($preview) < $num_chars) {
+                $preview .= $dom->saveHTML($node);
+                $node = $node->nextSibling;
+            }
+        }
+        return $preview;
+    }
+}
+
+$post_content = $post['content'];
+$post_excerpt = getPostExcerpt($post_content, 500);
+if (strlen($post_content) > 500) $post_excerpt .= "...";
 ?>
 
 <!-- Title -->

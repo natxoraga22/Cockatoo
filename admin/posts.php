@@ -124,10 +124,14 @@ if (isset($_POST['submit_bulk']) && isset($_POST['bulk_posts'])) {
                                         </td>
                                         
                                         <!-- Author -->
-                                        <td><?php echo $post['author'] ?></td>
+                                        <td><a href="../author.php?username=<?php echo $post['author'] ?>">
+                                            <?php echo $post['author'] ?>
+                                        </a></td>
                                         
                                         <!-- Category -->
-                                        <td><?php echo $post_category['title'] ?></td>
+                                        <td><a href="../category.php?id=<?php echo $post['category_id'] ?>">
+                                            <?php echo $post_category['title'] ?>
+                                        </a></td>
                                         
                                         <!-- Status -->
                                         <td>

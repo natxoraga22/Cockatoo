@@ -23,7 +23,7 @@ if (isset($_POST['submit_publish']) || isset($_POST['submit_save_draft'])) {
         $error_message = "Post title can not be empty";
     }
     else {
-        $id = insertPost($post['title'], "txraga22", date("Y-m-d H:i:s"), $post_image, 
+        $id = insertPost($post['title'], $_SESSION['user']['username'], date("Y-m-d H:i:s"), $post_image, 
                          $post['content'], $post['tags'], 0, $post['status'], $post['category_id']);
 
         $common_success_message = "Click <a class='alert-link' href='../post.php?id=$id'>here</a> to view the post";

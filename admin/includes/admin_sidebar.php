@@ -6,6 +6,7 @@ $page = basename($_SERVER['PHP_SELF']);
 /** LOGOUT **/
 if (isset($_POST['submit_logout'])) {
     session_unset();
+    header("Location: ../index.php");
 } 
 ?>
 

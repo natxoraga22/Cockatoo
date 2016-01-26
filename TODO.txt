@@ -1,13 +1,10 @@
 
 *Eliminar comentarios cuando se elimina un post
-*Añadir autor al post: añadir el autor al insertar y solo dejar editar si eres el autor
 *Dejar categoria por defecto o sin categoria a los posts cuando se elimina una categoria
-*Link al clicar en el autor de un post: todos los posts de ese autor
-*Link en la pagina "todos los posts" en la categoria y el autor de cada post
+*Eliminar posts cuando se elimina su autor? O dejar con el nombre?
+*Solo dejar editar/eliminar/publicar un post si eres el autor
 *Boton delete al lado del "Edit" que aparece al lado de cada post en la pagina principal??
 
-*Al fer logout dintre admin hauria de sortir directament a fora
-*Boto read more: l'excerpt al contenir html a vegades destrueix els estils de la pagina --> html-excerpt.php a github
 *Posar una imatge (o dues o tres) per defecte als comentaris
 
 
@@ -19,3 +16,9 @@
 
 *Canviar getPostsForCategory a getPublishedPostsForCategory
 *Mirar que tot es retorni ordenat per data DESC
+*Al fer logout dintre admin hauria de sortir directament a fora
+*Link al clicar en el autor de un post: todos los posts de ese autor
+*Añadir autor al post: añadir el autor al insertar
+*Link en la pagina "todos los posts" en la categoria y el autor de cada post
+*Boto read more: l'excerpt al contenir html a vegades destrueix els estils de la pagina --> html-excerpt.php a github
+

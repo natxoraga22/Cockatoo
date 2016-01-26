@@ -30,7 +30,7 @@ if (isset($_POST['submit_edit'])) {
         $error_message = "Post title can not be empty";
     }
     else {
-        updatePost($id, $post['title'], "txraga22", $post['date'], $new_post_image, $post['content'], 
+        updatePost($id, $post['title'], $post['author'], $post['date'], $new_post_image, $post['content'], 
                    $post['tags'], $post['comment_count'], $post['status'], $post['category_id']);
         
         $success_message = "Post edited successfully. Click <a class='alert-link' href='../post.php?id=$id'>here</a> to view the post";
