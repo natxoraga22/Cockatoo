@@ -99,6 +99,7 @@ if (isset($_POST['submit_bulk']) && isset($_POST['bulk_posts'])) {
                                     $post_category = findCategoryById($post['category_id']);
                                 ?>
                                     <tr>
+                                        <!-- Checkbox -->
                                         <td>
                                             <div class="checkbox">
                                                 <label>
@@ -107,17 +108,28 @@ if (isset($_POST['submit_bulk']) && isset($_POST['bulk_posts'])) {
                                                 </label>
                                             </div>
                                         </td>
+                                        
+                                        <!-- ID -->
                                         <td class="hide"><?php echo $post['id'] ?></td>
+                                        
+                                        <!-- Title -->
                                         <td>
                                             <strong><a href="../post.php?id=<?php echo $post['id']?>">
                                                 <?php echo $post['title'] ?>
                                             </a></strong>
                                             <br>
                                             <small><a href="edit_post.php?post_id=<?php echo $post['id'] ?>">Edit</a></small>
-                                            <small><a href="posts.php?delete=<?php echo $post['id'] ?>">Delete</a></small>
+                                            <small><a onClick="javascript: return confirm('Are you sure you want to delete the post?')" 
+                                                      href="posts.php?delete=<?php echo $post['id'] ?>">Delete</a></small>
                                         </td>
+                                        
+                                        <!-- Author -->
                                         <td><?php echo $post['author'] ?></td>
+                                        
+                                        <!-- Category -->
                                         <td><?php echo $post_category['title'] ?></td>
+                                        
+                                        <!-- Status -->
                                         <td>
                                             <?php 
                                             echo $post['status'];
@@ -128,6 +140,8 @@ if (isset($_POST['submit_bulk']) && isset($_POST['bulk_posts'])) {
                                             }
                                             ?>
                                         </td>
+                                        
+                                        <!-- Image -->
                                         <td>
                                             <?php
                                             if (isset($post['image']) && trim($post['image']) != "") {
@@ -140,8 +154,14 @@ if (isset($_POST['submit_bulk']) && isset($_POST['bulk_posts'])) {
                                             }
                                             ?>
                                         </td>
+                                        
+                                        <!-- Tags -->
                                         <td><?php echo $post['tags'] ?></td>
+                                        
+                                        <!-- Comment count -->
                                         <td><?php echo $post['comment_count'] ?></td>
+                                        
+                                        <!-- Date -->
                                         <td><?php echo $post['date'] ?></td>
                                     </tr>
                                 <?php

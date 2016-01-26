@@ -60,7 +60,8 @@ if (isset($_GET['delete'])) {
                                         <strong><?php echo $user['username'] ?></strong>
                                         <br>
                                         <small><a href="edit_user.php?user_id=<?php echo $user['id'] ?>">Edit</a></small>
-                                        <small><a href="users.php?delete=<?php echo $user['id'] ?>">Delete</a></small>
+                                        <small><a onClick="javascript: return confirm('Are you sure you want to delete the user?')" 
+                                                  href="users.php?delete=<?php echo $user['id'] ?>">Delete</a></small>
                                     </td>
                                     <td><?php echo $user['first_name'] ?></td>
                                     <td><?php echo $user['last_name'] ?></td>
