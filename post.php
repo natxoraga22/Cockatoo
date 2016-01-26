@@ -63,7 +63,7 @@ if (isset($_POST['submit_comment'])) {
 
             <!-- Author -->
             <p class="lead">
-                by <a href="#"><?php echo $post['author'] ?></a>
+                by <a href="author.php?username=<?php echo $post['author'] ?>"><?php echo $post['author'] ?></a>
             </p>
 
             <!-- Date/Time -->

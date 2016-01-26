@@ -4,6 +4,7 @@
     if (strlen($post_content) > 500) $post_excerpt .= "...";
 ?>
 
+<!-- Title -->
 <h2>
     <a href="post.php?id=<?php echo $post['id'] ?>"><?php echo $post['title'] ?></a>
     <?php
@@ -15,11 +16,14 @@
     ?>
 </h2>
 
-<p class="lead">by <a href="index.php"><?php echo $post['author'] ?></a></p>
+<!-- Author -->
+<p class="lead">by <a href="author.php?username=<?php echo $post['author'] ?>"><?php echo $post['author'] ?></a></p>
 
+<!-- Date -->
 <p><span class="glyphicon glyphicon-time"></span> Posted on <?php echo $post['date']?></p>
 <hr>
 
+<!-- Image -->
 <?php
 if (isset($post['image']) && trim($post['image']) != "") {
 ?>
@@ -29,6 +33,7 @@ if (isset($post['image']) && trim($post['image']) != "") {
 }
 ?>
 
+<!-- Excerpt -->
 <p><?php echo $post_excerpt ?></p>
 <a class="btn btn-primary" href="post.php?id=<?php echo $post['id'] ?>">
     Read More <span class="glyphicon glyphicon-chevron-right"></span>

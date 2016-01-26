@@ -35,6 +35,11 @@ function getPublishedPostsWithCategory($category_id) {
     return getPostsWithQuery($query);
 }
 
+function getPublishedPostsByAuthor($author) {
+    $query = "SELECT * FROM posts WHERE status = 'Published' AND author = '$author' ORDER BY date DESC";
+    return getPostsWithQuery($query);
+}
+
 function searchPublishedPostsByTags($search_query) {
     $query = "SELECT * FROM posts WHERE status = 'Published' AND tags LIKE '%$search_query%' ORDER BY date DESC";
     return getPostsWithQuery($query);
