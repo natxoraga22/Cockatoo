@@ -28,7 +28,7 @@
             <?php
             if (isset($_GET['id'])) {
                 $category_id = $_GET['id'];
-                $posts = getPostsWithCategory($category_id);
+                $posts = getPublishedPostsWithCategory($category_id);
                 if (count($posts) == 0) {
                     echo "<h3>No posts for this category</h3>";
                 }

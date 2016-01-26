@@ -5,3 +5,17 @@
 *Link al clicar en el autor de un post: todos los posts de ese autor
 *Link en la pagina "todos los posts" en la categoria y el autor de cada post
 *Boton delete al lado del "Edit" que aparece al lado de cada post en la pagina principal??
+
+*Al fer logout dintre admin hauria de sortir directament a fora
+*Boto read more: l'excerpt al contenir html a vegades destrueix els estils de la pagina --> html-excerpt.php a github
+*Posar una imatge (o dues o tres) per defecte als comentaris
+
+
+
+
+/****************************/
+/*********** DONE ***********/
+/****************************/
+
+*Canviar getPostsForCategory a getPublishedPostsForCategory
+*Mirar que tot es retorni ordenat per data DESC

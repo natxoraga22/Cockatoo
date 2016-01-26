@@ -17,17 +17,17 @@ function getCommentsWithQuery($query) {
 }
 
 function getAllComments() {
-    $query = "SELECT * FROM comments";
+    $query = "SELECT * FROM comments ORDER BY date DESC";
     return getCommentsWithQuery($query);
 }
 
 function getApprovedComments() {
-    $query = "SELECT * FROM comments WHERE status = 'Approved'";
+    $query = "SELECT * FROM comments WHERE status = 'Approved' ORDER BY date DESC";
     return getCommentsWithQuery($query);
 }
 
 function getUnapprovedComments() {
-    $query = "SELECT * FROM comments WHERE status = 'Unapproved'";
+    $query = "SELECT * FROM comments WHERE status = 'Unapproved' ORDER BY date DESC";
     return getCommentsWithQuery($query);
 }
 

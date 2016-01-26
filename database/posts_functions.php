@@ -30,13 +30,13 @@ function getDraftPosts() {
     return getPostsWithQuery($query);
 }
 
-function getPostsWithCategory($category_id) {
-    $query = "SELECT * FROM posts WHERE category_id = $category_id ORDER BY date DESC";
+function getPublishedPostsWithCategory($category_id) {
+    $query = "SELECT * FROM posts WHERE status = 'Published' AND category_id = $category_id ORDER BY date DESC";
     return getPostsWithQuery($query);
 }
 
-function searchPostsByTags($search_query) {
-    $query = "SELECT * FROM posts WHERE tags LIKE '%$search_query%' ORDER BY date DESC";
+function searchPublishedPostsByTags($search_query) {
+    $query = "SELECT * FROM posts WHERE status = 'Published' AND tags LIKE '%$search_query%' ORDER BY date DESC";
     return getPostsWithQuery($query);
 }
 

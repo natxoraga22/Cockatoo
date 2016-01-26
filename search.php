@@ -24,7 +24,7 @@
             <!-- Blog posts -->
             <?php
             if (isset($_POST['submit_search'])) {
-                $posts = searchPostsByTags($_POST['search_query']);
+                $posts = searchPublishedPostsByTags($_POST['search_query']);
 
                 if (count($posts) == 0) {
                     echo "<h3>No results found</h3>";

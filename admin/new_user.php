@@ -30,12 +30,12 @@ if (isset($_POST['submit_add_user'])) {
     if (empty(trim($user['email']))) {
         $error_messages[] = "Email can not be empty";
     }
-    if (empty(trim($user['first_name']))) {
+    /*if (empty(trim($user['first_name']))) {
         $error_messages[] = "First name can not be empty";
     }
     if (empty(trim($user['last_name']))) {
         $error_messages[] = "Last name can not be empty";
-    }
+    }*/
     if (empty(trim($user_password))) {
         $error_messages[] = "Password can not be empty";
     }

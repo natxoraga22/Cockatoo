@@ -45,13 +45,13 @@ function findUserByUsername($username) {
 
 function checkUserPasswordById($id, $password) {
     $user = findUserById($id);
-    return $user['password'] == $password;
+    return password_verify($password, $user['password']);
 }
 
 function checkUserPasswordByUsername($username, $password) {
     $user = findUserByUsername($username);
     if (!isset($user)) return false; // User not found
-    return $user['password'] == $password;
+    return password_verify($password, $user['password']);
 }
 
 function insertUser($username, $password, $first_name, $last_name, $email, $image, $role) {
@@ -65,8 +65,11 @@ function insertUser($username, $password, $first_name, $last_name, $email, $imag
     $image = mysqli_real_escape_string($connection, $image);
     $role = mysqli_real_escape_string($connection, trim($role));
     
+    // Password encrypt 
+    $password_hash = password_hash($password, PASSWORD_DEFAULT);
+    
     $query = "INSERT INTO users(username, password, first_name, last_name, email, image, role) ";
-    $query .= "VALUES('$username', '$password', '$first_name', '$last_name', '$email', '$image', '$role')";
+    $query .= "VALUES('$username', '$password_hash', '$first_name', '$last_name', '$email', '$image', '$role')";
 
     $insert_result = mysqli_query($connection, $query);
     if (!$insert_result) die("QUERY FAILED: " . mysqli_error($connection));
@@ -83,7 +86,10 @@ function updateUser($id, $new_username, $new_password, $new_first_name, $new_las
     $new_image = mysqli_real_escape_string($connection, $new_image);
     $new_role = mysqli_real_escape_string($connection, trim($new_role));
     
-    $query = "UPDATE users SET username = '$new_username', password = '$new_password', first_name = '$new_first_name', ";
+    // Password encrypt 
+    $new_password_hash = password_hash($new_password, PASSWORD_DEFAULT);
+    
+    $query = "UPDATE users SET username = '$new_username', password = '$new_password_hash', first_name = '$new_first_name', ";
     $query .= "last_name = '$new_last_name', email = '$new_email', image = '$new_image', role = '$new_role' ";
     $query .= "WHERE id = $id";
 
