@@ -19,7 +19,6 @@ if (!function_exists('getPostExcerpt')) {
 
 $post_content = $post['content'];
 $post_excerpt = getPostExcerpt($post_content, 500);
-if (strlen($post_content) > 500) $post_excerpt .= "...";
 ?>
 
 <!-- Title -->
